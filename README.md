@@ -9,8 +9,6 @@ The application serves as an efficient tool to manage employee records by allowi
 
 Built using Python and the Flask framework, this web application offers a seamless and intuitive user interface. The backend is powered by MySQL, with SQLAlchemy as the ORM (Object-Relational Mapping) tool, ensuring effective data handling and integrity.
 
-Key features of this application include comprehensive employee data management, real-time updates, and secure data storage. The system's design prioritizes ease of use, making it accessible for users with varying levels of technical expertise.
-
 ## Setup
 Clone directory:
 ```
