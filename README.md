@@ -11,6 +11,41 @@ Built using Python and the Flask framework, this web application offers a seamle
 
 Key features of this application include comprehensive employee data management, real-time updates, and secure data storage. The system's design prioritizes ease of use, making it accessible for users with varying levels of technical expertise.
 
+## Setup
+Clone directory:
+```
+$ cd [workspace folder]
+$ git clone https://github.com/johanfortus/Employee-Management-System.git
+```
+
+Create Python virtual environment:
+```
+$ python -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+```
+
+Start XAMPP and create a database
+- Open XAMPP Control Panel and start Apache and MySQL services.
+- Create a new database named `crud` through phpMyAdmin.
+
+Initialize the database with Flask:
+```
+python
+from app import app, db
+with app.app_context():
+    db.create_all()
+exit()
+```
+
+Start server:
+```
+(venv) $ flask run
+```
+
+Open http://localhost:5000/ to view project in the browser.
+
+
 ## Built With
 
 - <img src="https://img.shields.io/badge/-Python-blue?style=for-the-badge&logo=python&logoColor=FFFF2E" />
