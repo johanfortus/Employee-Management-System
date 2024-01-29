@@ -53,4 +53,4 @@ Open http://localhost:5000/ to view project in the browser.
 
 ## Demonstration
 
-<img src="" /> 
+<img src="https://github.com/johanfortus/Employee-Management-System/blob/main/Assets/EmployeeManagementDemo.gif" /> 
