@@ -4,79 +4,74 @@
 
 {% block content %}
 
-      <!-- ADD MODAL -->
-      <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="ModalLabel">Add Employee</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-              <form action="{{url_for('insert')}}" method="POST">
-                <div class="mb-3">
-                  <label for="inputName" class="form-label">Name:</label>
-                  <input type="text" class="form-control" id="inputName" name="name" required="1">
-                </div>
-                <div class="mb-3">
-                  <label for="inputEmail" class="form-label">Email:</label>
-                  <input type="text" class="form-control" id="inputEmail" name="email" required="1">
-                </div>
-                <div class="mb-3">
-                  <label for="inputPhone" class="form-label">Phone:</label>
-                  <input type="text" class="form-control" id="inputPhone" name="phone" required="1">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Add Employee</button>
-              </form>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
+<!-- ADD MODAL -->
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalLabel">Add Employee</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-      </div>
+        <div class="modal-body">
+            <form action="{{url_for('insert')}}" method="POST">
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="inputName" name="name" required="1">
+            </div>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email:</label>
+                <input type="text" class="form-control" id="inputEmail" name="email" required="1">
+            </div>
+            <div class="mb-3">
+                <label for="inputPhone" class="form-label">Phone:</label>
+                <input type="text" class="form-control" id="inputPhone" name="phone" required="1">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Employee</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
 
       <!-- UPDATE MODAL -->
-      {% for row in employees %} 
-      <div class="modal fade" id="updateModal{{row.id}}" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="ModalLabel">Update Employee</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-              <form action="{{url_for('update')}}" method="POST">
-                <div class="mb-3">
-                  <label for="inputName" class="form-label">Name:</label>
-                  <input type="hidden" name="id" value="{{row.id}}">
-                  <input type="text" class="form-control" id="inputName" name="name" value="{{row.name}}">
-                </div>
-                <div class="mb-3">
-                  <label for="inputEmail" class="form-label">Email:</label>
-                  <input type="text" class="form-control" id="inputEmail" name="email" value="{{row.email}}">
-                </div>
-                <div class="mb-3">
-                  <label for="inputPhone" class="form-label">Phone:</label>
-                  <input type="text" class="form-control" id="inputPhone" name="phone" value="{{row.phone}}">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Update</button>
-              </form>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
+{% for row in employees %} 
+<div class="modal fade" id="updateModal{{row.id}}" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ModalLabel">Update Employee</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      {% endfor %} 
+      <div class="modal-body">
+        <form action="{{url_for('update')}}" method="POST">
+          <div class="mb-3">
+            <label for="inputName" class="form-label">Name:</label>
+            <input type="hidden" name="id" value="{{row.id}}">
+            <input type="text" class="form-control" id="inputName" name="name" value="{{row.name}}">
+          </div>
+          <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email:</label>
+            <input type="text" class="form-control" id="inputEmail" name="email" value="{{row.email}}">
+          </div>
+          <div class="mb-3">
+            <label for="inputPhone" class="form-label">Phone:</label>
+            <input type="text" class="form-control" id="inputPhone" name="phone" value="{{row.phone}}">
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %} 
 
+<!-- EMPLOYEE TABLE -->
 <section class="mt-3 pt-3">
     <div class="container-lg d-flex justify-content-center">
         <div class="row bg-body-tertiary d-flex justify-content-center col-md-12">
@@ -105,11 +100,10 @@
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
-
                 <tbody>
 
+                    <!-- DISPLAY EMPLOYEES -->
                     {% for row in employees %} 
-
                   <tr>
                     <td>{{row.id}}</td>
                     <td>{{row.name}}</td>
@@ -120,13 +114,14 @@
                       <a href="/delete/{{row.id}}" type="button" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
                     </td>
                   </tr>
-
                   {% endfor %}
+
                 </tbody>
               </table>
             </div>
         </div>
     </div>
 </section>
+
 
 {% endblock %}
