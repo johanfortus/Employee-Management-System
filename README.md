@@ -16,7 +16,7 @@ Key features of this application include comprehensive employee data management,
 - <img src="https://img.shields.io/badge/-Python-blue?style=for-the-badge&logo=python&logoColor=FFFF2E" />
 - <img src="https://img.shields.io/badge/-Flask-black?style=for-the-badge&logo=flask" />
 - <img src="https://img.shields.io/badge/bootstrap-%237952B3.svg?&style=for-the-badge&logo=bootstrap&logoColor=white" />
-- <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" /> 
+- <img src="https://img.shields.io/badge/mysql-%23316192.svg?style=for-the-badge&logo=mysql&logoColor=white" /> 
 
 ## Demonstration
 
