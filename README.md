@@ -10,12 +10,6 @@ The application serves as an efficient tool to manage employee records by allowi
 Built using Python and the Flask framework, this web application offers a seamless and intuitive user interface. The backend is powered by MySQL, with SQLAlchemy as the ORM (Object-Relational Mapping) tool.
 
 ## Setup
-Clone directory:
-```
-$ cd [workspace folder]
-$ git clone https://github.com/johanfortus/Employee-Management-System.git
-```
-
 Create Python virtual environment:
 ```
 $ python -m venv venv
